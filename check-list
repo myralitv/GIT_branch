@@ -1,0 +1,81 @@
+Functional testing
+
+At this point, it is important for us to make sure that our product meets the desired functional specification mentioned in the development documentation.
+
+What are we checking?
+
+Form testing
+	1. Registration
+
+		- The user with the data exists in the system.
+		- The user with the data does not exist in the system.
+		- A user blocked in the system cannot re-register.
+
+	2. Authorization
+
+		- The user exists in the system with the entered login and password.
+		- The user with the entered login does not exist in the system.
+		- The user with the entered login exists in the system, but the password is incorrect.
+		- The user with the entered login and password exists in the system, but is blocked by moderation (the page is frozen).
+		- Validation of input fields.
+
+	3. Test validation of all required fields
+
+		- Maximum and minimum length.
+		- Range of valid characters, special characters.
+		- Mandatory to fill.
+		- Make sure that the asterisk (asterisk sign) is displayed for all required fields.
+		- Make sure that the system does not display an error window with empty optional fields.
+
+	4. Feedback Forms
+	5. Links to user agreements
+
+Search
+
+	1. Results exist/do not exist.
+	2. Correct message about an empty result.
+	3. Empty search term.
+	4. Emoji search.
+
+Fields
+
+	1. Numeric fields: these must not accept letters, in which case an appropriate error message should be displayed.
+	2. Fractional values, such as how the system validates 1.1 and 1.1.
+	3. Negative values ​​in numeric fields, if allowed.
+	4. Division by zero is handled correctly.
+	5. Test the maximum length of each field to make sure the data is not truncated or hidden under ellipsis.
+	6. Test all input fields for special characters.
+	7. Check that the text does not go beyond the field boundaries.
+
+Pop-up messages
+
+	1. Test popup messages ("This field is limited to N characters").
+	2. Confirmation messages are displayed for update and delete operations.
+	3. Input error messages.
+
+Filters
+
+	1. Test sorting functionality (ascending, descending, newest).
+	2. Set filters with issuance.
+	3. Set filters for which there is no issue.
+	4. Filters by categories/subcategories.
+	5. Filters with search radius.
+	6. Data in drop down lists.
+
+Test the functionality of the available buttons.
+The presence of a favicon.
+Check handling of various errors (page not found, timeout, server error, etc.).
+Test that all downloaded documents open correctly.
+The user can download/attach/upload files/media (pictures, videos, etc.). And also remove these files from attachments. Make sure that files go to the server only after pressing the appropriate button
+Test the mail functionality of the system.
+
+Cache, cookies and sessions
+
+	1.The user has cleared the browser cache
+	2. See what happens if a user deletes cookies while on the site.
+	3. See what happens if a user deletes cookies after visiting the site.
+
+DevTools
+	1. Errors in Console.
+	2. All styles are loaded.
+	3. Pictures are loading.
